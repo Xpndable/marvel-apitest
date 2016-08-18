@@ -1,0 +1,18 @@
+<div class="comic-container">
+  <input type="text" class="search" onchange="search(this)"/>
+  <%for(var comic in this.results) {%>
+    <div class="comic">
+      <div class="comic-left">
+        <div class="comic-image">
+          <img src="<%this.results[comic].thumbnail.path%>/portrait_medium.<%this.results[comic].thumbnail.extension%>" />
+        </div>
+      </div>
+      <div class="comic-right">
+        <div class="comic-title"><%this.results[comic].title%></div>
+        <%if(this.results[comic].description) {%>
+          <div class="comic-description"><%this.results[comic].description%></div>
+        <%}%>
+      </div>
+    </div>
+  <%}%>
+</div>
