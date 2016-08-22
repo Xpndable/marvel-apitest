@@ -1,0 +1,26 @@
+<div class="comic-container">
+  <div class="comic-full">
+    <div class="comic-image">
+      <img src="<%this.thumbnail.path%>/portrait_incredible.<%this.thumbnail.extension%>" />
+    </div>
+    <div class="comic-title-full"><%this.title%></div>
+    <div class="creators">
+      <%for(var c in this.creators.items) {%>
+        <%this.creators.items[c].name%>, <%this.creators.items[c].role%><br/>
+      <%}%>
+    </div>
+    <%if(this.description) {%>
+      <div class="comic-description-full"><%this.description%></div>
+    <%}%>
+  </div>
+  <div class="characters-box">
+    <div class="comic-title-full">Characters</div>
+    <div class="characters-list">
+      <%for(var ch in this.characters.items) {%>
+        <div class="character">
+          <%this.characters.items[ch].name%>
+        </div>
+      <%}%>
+    </div>
+  </div>
+</div>

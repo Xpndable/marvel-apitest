@@ -1,31 +1,42 @@
-.comic {
+.comic, .comic-full, .characters-list {
   background: white;
   margin: 30px auto;
   width: 500px;
-  display: flex;
   border-radius: 10px;
   box-shadow: 0 0 20px #444;
   cursor: pointer;
 }
-.comic:hover {
+.comic {
+  display: flex;
+}
+.comic:hover, .character:hover {
   box-shadow: 0 0 20px blue;
 }
-.comic-left {
-  margin: 10px;
-}
-.comic-right {
-  margin: 10px;
+.comic-left, .comic-right {
+  margin:  0 0 0 10px;
+  display: inline-block;
 }
 .comic-image {
-  height: 150px;
+  text-align: center;
+  padding-top: 10px;
 }
-.comic-title {
+.comic-title, .comic-title-full {
   font-weight: 700;
   font-size: 1.15em;
+  padding: 10px 0;
+}
+.comic-title-full {
+  text-align: center;
+  font-size: 1.5em;
 }
 .comic-description {
   overflow: hidden;
   height: 7.6em;
+  margin-bottom: 10px;
+}
+.comic-description-full {
+  margin: 10px;
+  padding-bottom: 10px;
 }
 .comic-container {
   background: lightgrey;
@@ -40,4 +51,27 @@
   box-shadow: 0 0 20px #444;
   border-radius: 20px;
   padding: 5px 20px;
+}
+.creators {
+  padding: 10px;
+}
+.character {
+  display: flex;
+  font-size: 1.15em;
+  font-weight: 700;
+  height: 60px;
+  padding: 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #888;
+  margin: 10px;
+  min-width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+.characters-list {
+  width: 60%;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  border: 8px solid white;
 }
